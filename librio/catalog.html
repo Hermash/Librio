@@ -1,55 +1,59 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <title>Librio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="logo"> 
-      <img src="images/logo_full2.png" alt="Логотип Librio" width="100"> 
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог книжок | Librio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Каталог Librio</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="catalog.html" class="active">Каталог</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="contact.html">Контакти</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <div class="search">
-      <form action="catalog.html" method="get">
-        <input type="text" id="search" name="q" placeholder="Search Books">
-        <button type="submit">🔍</button>
+    <main>
+      <h2>Популярні книжки</h2>
+      <ol>
+        <li>
+          <img
+            src="images/1984.webp"
+            alt="Обкладинка книжки 1984 Джорджа Орвелла"
+            width="150"
+          />
+          <p><strong>1984</strong> — Джордж Орвелл</p>
+        </li>
+        <li>
+          <img
+            src="images/orientexpress.webp"
+            alt="Обкладинка книжки Убивство у Східному експресі"
+            width="150"
+          />
+          <p><strong>Убивство у «Східному експресі»</strong> — Аґата Крісті</p>
+        </li>
+      </ol>
+
+      <form action="#" method="get">
+        <label for="search">Пошук книжок:</label>
+        <input
+          type="text"
+          id="search"
+          name="q"
+          placeholder="Введіть назву..."
+        />
+        <button type="submit">Пошук</button>
       </form>
-    </div>
+    </main>
 
-    <div class="profile">
-      <a href="auth.html">
-        <button type="button">Профіль</button>
-      </a>
-    </div>
-
-    <nav class="main-nav">
-      <a href="index.html">Головна</a>
-      <span>|</span>
-      <a href="catalog.html">Каталог</a>
-    </nav>
-  </header>
-
-  <main>
-    <h2>Каталог</h2> 
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="images/logo2.png" alt="Логотип Librio" width="35">
-      </div>
-
-      <div class="footer-links">
-        <a href="index.html">Головна</a>
-        <a href="catalog.html">Каталог</a>
-      </div>
-
-      <div class="footer-copy">
-        <p>&copy; 2025 Librio.</p>
-      </div>
-    </div>
-  </footer>
-</body>
+    <footer>
+      <p>&copy; 2025 Librio.</p>
+    </footer>
+  </body>
 </html>

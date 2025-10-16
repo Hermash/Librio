@@ -1,55 +1,67 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <title>Librio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="logo"> 
-      <img src="images/logo_full2.png" alt="Логотип Librio" width="100"> 
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Librio – Світ книжок</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Librio</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="contact.html">Контакти</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <div class="search">
-      <form action="catalog.html" method="get">
-        <input type="text" id="search" name="q" placeholder="Search Books">
-        <button type="submit">🔍</button>
-      </form>
-    </div>
+    <main>
+      <section class="intro">
+        <h2>Ласкаво просимо до Librio</h2>
+        <p>
+          Librio — це онлайн-простір для всіх, хто закоханий у книжки. Ми
+          допомагаємо знайти натхнення, спокій і нові ідеї на сторінках
+          улюблених історій.
+        </p>
+      </section>
 
-    <div class="profile">
-      <a href="auth.html">
-        <button type="button">Профіль</button>
-      </a>
-    </div>
+      <section class="genres">
+        <h2>Популярні жанри</h2>
+        <ul>
+          <li>Фантастика</li>
+          <li>Психологія та саморозвиток</li>
+          <li>Класика</li>
+          <li>Детективи</li>
+        </ul>
+      </section>
 
-    <nav class="main-nav">
-      <a href="index.html">Головна</a>
-      <span>|</span>
-      <a href="catalog.html">Каталог</a>
-    </nav>
-  </header>
+      <section class="newsletter">
+        <h2>Підпишіться на наші оновлення</h2>
+        <p>Отримуйте новини про нові книжки, події та знижки щотижня.</p>
+        <form action="#" method="post">
+          <label for="email">Введіть ваш Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
+          <button type="submit">Підписатися</button>
+        </form>
+      </section>
+    </main>
 
-  <main>
-    <h2>Ласкаво просимо до Librio!</h2> 
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="images/logo2.png" alt="Логотип Librio" width="35">
-      </div>
-
-      <div class="footer-links">
-        <a href="index.html">Головна</a>
-        <a href="catalog.html">Каталог</a>
-      </div>
-
-      <div class="footer-copy">
-        <p>&copy; 2025 Librio.</p>
-      </div>
-    </div>
-  </footer>
-</body>
+    <footer>
+      <p>&copy; 2025 Librio. Усі права захищено.</p>
+      <ul>
+        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+        <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+      </ul>
+    </footer>
+  </body>
 </html>

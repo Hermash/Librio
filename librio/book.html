@@ -1,55 +1,62 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <title>Librio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="logo"> 
-      <img src="images/logo_full2.png" alt="Логотип Librio" width="100"> 
-    </div>
-
-    <div class="search">
-      <form action="catalog.html" method="get">
-        <input type="text" id="search" name="q" placeholder="Search Books">
-        <button type="submit">🔍</button>
-      </form>
-    </div>
-
-    <div class="profile">
-      <a href="auth.html">
-        <button type="button">Профіль</button>
-      </a>
-    </div>
-
-    <nav class="main-nav">
-      <a href="index.html">Головна</a>
-      <span>|</span>
-      <a href="catalog.html">Каталог</a>
-    </nav>
-  </header>
-
-  <main>
-    <h2>Книга</h2> 
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="images/logo2.png" alt="Логотип Librio" width="35">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Librio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">
+        <img src="images/logo_full2.png" alt="Логотип Librio" width="100" />
       </div>
 
-      <div class="footer-links">
+      <div class="search">
+        <form action="catalog.html" method="get">
+          <input type="text" id="search" name="q" placeholder="Search Books" />
+          <button type="submit">🔍</button>
+        </form>
+      </div>
+
+      <div class="profile">
+        <a href="auth.html" class="btn">Профіль</a>
+      </div>
+
+      <nav class="main-nav">
         <a href="index.html">Головна</a>
+        <span>|</span>
         <a href="catalog.html">Каталог</a>
-      </div>
+      </nav>
+    </header>
 
-      <div class="footer-copy">
-        <p>&copy; 2025 Librio.</p>
+    <main>
+      <h1>1984</h1>
+      <img src="images/book_1984.webp" alt="Обкладинка книги 1984" width="200" />
+
+      <h2>Автор: Джордж Орвелл</h2>
+      <p>
+        Роман-антиутопія, який описує тоталітарне суспільство, де кожен крок
+        людини перебуває під контролем. Твір про владу, правду та свободу.
+      </p>
+
+      <a href="catalog.html">← Повернутись до каталогу</a>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="images/logo2.png" alt="Логотип Librio" width="35" />
+        </div>
+
+        <div class="footer-links">
+          <a href="index.html">Головна</a>
+          <a href="catalog.html">Каталог</a>
+        </div>
+
+        <div class="footer-copy">
+          <p>&copy; 2025 Librio.</p>
+        </div>
       </div>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>

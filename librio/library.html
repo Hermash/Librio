@@ -1,68 +1,72 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <title>Профіль | Librio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="logo"> 
-      <img src="images/logo_full2.png" alt="Логотип Librio" width="100"> 
-    </div>
-
-    <div class="search">
-      <form action="catalog.html" method="get">
-        <input type="text" name="q" placeholder="Search Books">
-        <button type="submit">🔍</button>
-      </form>
-    </div>
-
-    <div class="profile">
-      <a href="auth.html">
-        <button type="button">Профіль</button>
-      </a>
-    </div>
-
-    <nav class="main-nav">
-      <a href="index.html">Головна</a>
-      <span>|</span>
-      <a href="catalog.html">Каталог</a>
-    </nav>
-  </header>
-
-  <div class="page-layout">
-    <aside class="sidebar">
-      <a href="profile.html" class="menu-item active">
-        <span>Профіль</span>
-        <span>👤</span>
-      </a>
-      <a href="library.html" class="menu-item">
-        <span>Бібліотека</span>
-        <span>📚</span>
-      </a>
-    </aside>
-
-    <main>
-      <h2>Профіль</h2> 
-    </main>
-  </div>
-
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="images/logo2.png" alt="Логотип Librio" width="35">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Профіль | Librio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">
+        <img src="images/logo_full2.png" alt="Логотип Librio" width="100" />
       </div>
-  
-      <div class="footer-links">
+
+      <div class="search">
+        <form action="catalog.html" method="get">
+          <input type="text" name="q" placeholder="Search Books" />
+          <button type="submit">🔍</button>
+        </form>
+      </div>
+
+      <div class="profile">
+        <a href="auth.html" class="btn">Профіль</a>
+      </div>
+
+      <nav class="main-nav">
         <a href="index.html">Головна</a>
+        <span>|</span>
         <a href="catalog.html">Каталог</a>
-      </div>
-  
-      <div class="footer-copy">
-        <p>&copy; 2025 Librio.</p>
-      </div>
+      </nav>
+    </header>
+
+    <div class="page-layout">
+      <aside class="sidebar">
+        <a href="profile.html" class="menu-item active">
+          <span>Профіль</span>
+          <span>👤</span>
+        </a>
+        <a href="library.html" class="menu-item">
+          <span>Бібліотека</span>
+          <span>📚</span>
+        </a>
+      </aside>
+
+      <main>
+        <h1>Моя бібліотека</h1>
+        <p>Ваші збережені книги:</p>
+
+        <ul>
+          <li><a href="book.html?id=1">1984</a></li>
+          <li><a href="book.html?id=2">Убивство у «Східному експресі»</a></li>
+        </ul>
+      </main>
     </div>
-  </footer>
-</body>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="images/logo2.png" alt="Логотип Librio" width="35" />
+        </div>
+
+        <div class="footer-links">
+          <a href="index.html">Головна</a>
+          <a href="catalog.html">Каталог</a>
+        </div>
+
+        <div class="footer-copy">
+          <p>&copy; 2025 Librio.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

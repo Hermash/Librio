@@ -1,34 +1,59 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <title>Librio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Вхід у профіль</h1>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Librio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Вхід у профіль</h1>
+    </header>
 
-  <main>
-    <h2>Вхід</h2>
-  </main>
+    <main>
+      <h1>Вхід у систему</h1>
+      <p>Увійдіть, щоб переглянути свій профіль і бібліотеку.</p>
 
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="images/logo2.png" alt="Логотип Librio" width="35">
+      <form action="profile.html" method="post">
+        <label for="email">Електронна пошта:</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@email.com"
+          required
+        /><br /><br />
+
+        <label for="password">Пароль:</label><br />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="********"
+          required
+        /><br /><br />
+
+        <button type="submit">Увійти</button>
+      </form>
+
+      <p>Ще не маєте акаунта? <a href="#">Зареєструйтесь</a></p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="images/logo2.png" alt="Логотип Librio" width="35" />
+        </div>
+
+        <div class="footer-links">
+          <a href="index.html">Головна</a>
+          <a href="catalog.html">Каталог</a>
+        </div>
+
+        <div class="footer-copy">
+          <p>&copy; 2025 Librio.</p>
+        </div>
       </div>
-
-      <div class="footer-links">
-        <a href="index.html">Головна</a>
-        <a href="catalog.html">Каталог</a>
-      </div>
-
-      <div class="footer-copy">
-        <p>&copy; 2025 Librio.</p>
-      </div>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
