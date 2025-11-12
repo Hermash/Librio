@@ -4,25 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Контакти | Librio</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <div class="logo">
-        <img src="images/logo_full2.png" alt="Логотип Librio" width="100" />
+      <div class="top-row">
+        <div class="logo">
+          <img src="images/logo_full1.png" alt="Логотип Librio" width="100" />
+        </div>
+      
+        <div class="search">
+          <form action="catalog.html" method="get">
+            <input type="text" name="q" placeholder="Search Books" />
+            <button type="submit">🔍</button>
+          </form>
+        </div>
+      
+        <div class="profile">
+          <a href="auth.html" class="btn">Профіль</a>
+        </div>
       </div>
-
-      <div class="search">
-        <form action="catalog.html" method="get">
-          <input type="text" name="q" placeholder="Search Books" />
-          <button type="submit">🔍</button>
-        </form>
-      </div>
-
-      <div class="profile">
-        <a href="auth.html" class="btn">Профіль</a>
-      </div>
-
+    
       <nav class="main-nav">
         <a href="index.html">Головна</a>
         <span>|</span>
@@ -32,6 +34,7 @@
         <span>|</span>
         <a href="contacts.html">Контакти</a>
       </nav>
+      <div class="burger">☰</div>
     </header>
 
     <main>
@@ -88,7 +91,7 @@
     <footer class="site-footer">
       <div class="footer-content">
         <div class="footer-logo">
-          <img src="images/logo2.png" alt="Логотип Librio" width="35" />
+          <img src="images/logo1.png" alt="Логотип Librio" width="50" />
         </div>
 
         <div class="footer-links">
@@ -98,14 +101,15 @@
           <a href="contacts.html">Контакти</a>
         </div>
 
+        <ul>
+          <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+          <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+        </ul>
         <div class="footer-copy">
           <p>&copy; 2025 Librio.</p>
         </div>
-        <ul>
-        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-        <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-      </ul>
       </div>
     </footer>
   </body>
+  <script src="js/script.js"></script>
 </html>
