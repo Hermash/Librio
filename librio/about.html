@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Про нас | Librio</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/about.css" />
   </head>
   <body>
     <header class="site-header">
@@ -12,19 +13,19 @@
         <div class="logo">
           <img src="images/logo_full1.png" alt="Логотип Librio" width="100" />
         </div>
-      
+
         <div class="search">
           <form action="catalog.html" method="get">
             <input type="text" name="q" placeholder="Search Books" />
             <button type="submit">🔍</button>
           </form>
         </div>
-      
+
         <div class="profile">
           <a href="auth.html" class="btn">Профіль</a>
         </div>
       </div>
-    
+
       <nav class="main-nav">
         <a href="index.html">Головна</a>
         <span>|</span>
@@ -38,56 +39,77 @@
     </header>
 
     <main>
-      <h2>Хто ми?</h2>
-      <p>
-        Librio — це онлайн-бібліотека, створена для тих, хто не уявляє життя без
-        книжок. Ми об'єднуємо читачів, авторів і всіх, хто цінує силу слова.
-      </p>
+      <div class="about-layout">
+        <!-- Ліва колонка — текст -->
+        <div class="about-text">
+          <h2>Хто ми?</h2>
+          <p>
+            Librio — це онлайн-бібліотека, створена для тих, хто не уявляє життя
+            без книжок. Ми об'єднуємо читачів, авторів і всіх, хто цінує силу
+            слова.
+          </p>
 
-      <h3>Наша місія</h3>
-      <p>
-        Допомагати людям відкривати нові світи через літературу та створювати
-        простір для натхнення й розвитку.
-      </p>
+          <h3>Наша мiсiя</h3>
+          <p>
+            Допомагати людям відкривати нові світи через літературу та
+            створювати простір для натхнення й розвитку.
+          </p>
 
-      <h3>Наші цінності</h3>
-      <ul>
-        <li>Любов до читання</li>
-        <li>Освіта і саморозвиток</li>
-        <li>Доступність знань</li>
-        <li>Сучасність і зручність</li>
-      </ul>
+          <h3>Наші цінності</h3>
+          <ul>
+            <li>Любов до читання</li>
+            <li>Освіта і саморозвиток</li>
+            <li>Доступність знань</li>
+            <li>Сучасність і зручність</li>
+          </ul>
 
-      <h2>Контактна форма</h2>
-      <p>Якщо у вас є запитання або пропозиції, будь ласка, напишіть нам:</p>
+          <h3>Або зв'яжіться напряму:</h3>
+          <ul>
+            <li>Email: <a href="mailto:info@librio.com">info@librio.com</a></li>
+            <li>
+              Instagram:
+              <a href="https://instagram.com/librio" target="_blank">@librio</a>
+            </li>
+          </ul>
+        </div>
 
-      <form action="#" method="post">
-        <label for="name">Ваше ім'я:</label>
-        <input type="text" id="name" name="name" required />
+        <!-- Права колонка — форма -->
+        <div class="about-form">
+          <div class="form-container">
+            <h2>Контактна форма</h2>
+            <p>
+              Якщо у вас є запитання або пропозиції, будь ласка, напишіть нам:
+            </p>
 
-        <label for="email">Ваш Email:</label>
-        <input type="email" id="email" name="email" required />
+            <form action="#" method="post" novalidate>
+              <div class="form-group">
+                <label for="name">Ваше ім'я:</label>
+                <input type="text" id="name" name="name" required />
+                <span class="error-message">Введіть ім'я</span>
+              </div>
 
-        <label for="message">Повідомлення:</label>
-        <textarea
-          id="message"
-          name="message"
-          rows="4"
-          placeholder="Ваше повідомлення..."
-          required
-        ></textarea>
+              <div class="form-group">
+                <label for="email">Ваш Email:</label>
+                <input type="email" id="email" name="email" required />
+                <span class="error-message">Введіть коректний email</span>
+              </div>
 
-        <button type="submit">Надіслати</button>
-      </form>
+              <div class="form-group">
+                <label for="message">Повідомлення:</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                ></textarea>
+                <span class="error-message">Введіть текст повідомлення</span>
+              </div>
 
-      <h3>Або зв'яжіться напряму</h3>
-      <ul>
-        <li>Email: <a href="mailto:info@librio.com">info@librio.com</a></li>
-        <li>
-          Instagram:
-          <a href="https://instagram.com/librio" target="_blank">@librio</a>
-        </li>
-      </ul>
+              <button type="submit" class="btn-submit">Надіслати</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="site-footer">

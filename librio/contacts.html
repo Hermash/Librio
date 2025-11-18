@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Контакти | Librio</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/contacts.css">
   </head>
   <body>
     <header class="site-header">
@@ -37,55 +38,64 @@
       <div class="burger">☰</div>
     </header>
 
-    <main>
-      <h2>Контакти</h2>
-      <p>Якщо у вас є запитання або пропозиції, ви можете зв'язатися з нами:</p>
-
+<main class="contacts-main">
+  <h2>Контакти</h2>
+  <div class="contacts-container">
+    <div class="contact-info">
       <h3>Контактна інформація</h3>
       <ul>
         <li>Email: <a href="mailto:info@librio.com">info@librio.com</a></li>
         <li>Телефон: <a href="tel:+380441234567">+38 (044) 123-45-67</a></li>
-        <li>
-          Instagram:
-          <a href="https://instagram.com/librio" target="_blank">@librio</a>
-        </li>
-        <li>
-          Facebook:
-          <a href="https://facebook.com/librio" target="_blank">Librio</a>
-        </li>
+        <li>Instagram: <a href="https://instagram.com/librio" target="_blank">@librio</a></li>
+        <li>Facebook: <a href="https://facebook.com/librio" target="_blank">Librio</a></li>
       </ul>
 
       <h3>Графік роботи</h3>
       <p>Понеділок - П'ятниця: 9:00 - 18:00</p>
       <p>Субота - Неділя: вихідні</p>
+    </div>
 
+    <div class="contact-form">
       <h2>Напишіть нам</h2>
-      <form action="#" method="post">
-        <label for="name">Ваше ім'я:</label>
-        <input type="text" id="name" name="name" required />
+      <form action="#" method="post" class="form-container" id="contactForm">
+  <div class="form-group">
+    <label for="name">Ваше ім'я:</label>
+    <input type="text" id="name" name="name" required minlength="2">
+    <div class="error-message" data-for="name"></div>
+  </div>
 
-        <label for="email">Ваш Email:</label>
-        <input type="email" id="email" name="email" required />
+  <div class="form-group">
+    <label for="email">Ваш Email:</label>
+    <input type="email" id="email" name="email" required>
+    <div class="error-message" data-for="email"></div>
+  </div>
 
-        <label for="subject">Тема:</label>
-        <select id="subject" name="subject" required>
-          <option value="">Оберіть тему</option>
-          <option value="general">Загальне питання</option>
-          <option value="support">Технічна підтримка</option>
-          <option value="cooperation">Співпраця</option>
-        </select>
+  <div class="form-group">
+    <label for="subject">Тема:</label>
+    <select id="subject" name="subject" required>
+      <option value="">Оберіть тему</option>
+      <option value="general">Загальне питання</option>
+      <option value="support">Технічна підтримка</option>
+      <option value="cooperation">Співпраця</option>
+    </select>
+    <div class="error-message" data-for="subject"></div>
+  </div>
 
-        <label for="message">Повідомлення:</label>
-        <textarea
-          id="message"
-          name="message"
-          rows="4"
-          placeholder="Ваше повідомлення..."
-          required
-        ></textarea>
+  <div class="form-group">
+    <label for="message">Повідомлення:</label>
+    <textarea
+      id="message"
+      name="message"
+      rows="4"
+      required
+      minlength="5"
+      placeholder="Ваше повідомлення..."
+    ></textarea>
+    <div class="error-message" data-for="message"></div>
+  </div>
 
-        <button type="submit">Надіслати</button>
-      </form>
+  <button type="submit" class="btn-submit">Надіслати</button>
+</form>
     </main>
 
     <footer class="site-footer">

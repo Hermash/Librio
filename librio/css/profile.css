@@ -1,0 +1,66 @@
+.profile-main {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.profile-main img {
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.profile-main h2 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #49111C;
+}
+
+.profile-main ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.profile-main ul li {
+  background-color: #F2F4F3;
+  padding: 8px 12px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.profile-main a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #0A0908;
+  color: #F2F4F3;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.profile-main a:hover {
+  background-color: #A9927D;
+  color: #F2F4F3;
+}
+
+/* Адаптивність */
+@media (max-width: 800px) {
+  .page-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px 0;
+  }
+
+  .sidebar .menu-item {
+    flex: 1;
+    justify-content: center;
+  }
+}

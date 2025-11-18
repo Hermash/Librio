@@ -1,0 +1,81 @@
+.page-layout {
+  display: flex;
+  gap: 20px;
+  min-height: 80vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  background-color: #F2F4F3;
+  padding: 20px 10px;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.sidebar .menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 25px;
+  color: #49111C;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sidebar .menu-item.active,
+.sidebar .menu-item:hover {
+  background-color: #A9927D;
+  color: #F2F4F3;
+}
+
+.library-main {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.library-books {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.library-books li a {
+  text-decoration: none;
+  color: #0A0908;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background-color: #F2F4F3;
+  transition: 0.3s;
+}
+
+.library-books li a:hover {
+  background-color: #A9927D;
+  color: #F2F4F3;
+}
+
+/* Адаптивність */
+@media (max-width: 800px) {
+  .page-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px 0;
+  }
+
+  .sidebar .menu-item {
+    flex: 1;
+    justify-content: center;
+  }
+}

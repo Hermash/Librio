@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Каталог книжок | Librio</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/catalog.css" />
   </head>
   <body>
     <header class="site-header">
@@ -12,14 +13,14 @@
         <div class="logo">
           <img src="images/logo_full1.png" alt="Логотип Librio" width="100" />
         </div>
-      
+
         <div class="search">
           <form action="catalog.html" method="get">
             <input type="text" name="q" placeholder="Search Books" />
             <button type="submit">🔍</button>
           </form>
         </div>
-      
+
         <div class="profile">
           <a href="auth.html" class="btn">Профіль</a>
         </div>
@@ -37,85 +38,86 @@
       <div class="burger">☰</div>
     </header>
 
-
-    <main>
+    <main class="catalog-main">
       <h2>Популярні книжки</h2>
-      <ol>
-        <li>
+      <div class="book-grid">
+        <div class="book-item">
           <img
             src="images/1984.webp"
             alt="Обкладинка книжки 1984 Джорджа Орвелла"
-            width="150"
           />
           <p><strong>1984</strong> — Джордж Орвелл</p>
-        </li>
-        <li>
+        </div>
+        <div class="book-item">
           <img
             src="images/orientexpress.webp"
             alt="Обкладинка книжки Убивство у Східному експресі"
-            width="150"
           />
           <p><strong>Убивство у «Східному експресі»</strong> — Аґата Крісті</p>
-        </li>
-        <li>
+        </div>
+        <div class="book-item">
           <img
             src="images/harry_potter.webp"
             alt="Обкладинка книжки Гаррі Поттер"
-            width="150"
           />
-          <p><strong>Гаррі Поттер і Філософський камінь</strong> — Дж. К. Ролінґ</p>
-        </li>
-        <li>
+          <p>
+            <strong>Гаррі Поттер і Філософський камінь</strong> — Дж. К. Ролінґ
+          </p>
+        </div>
+        <div class="book-item">
           <img
             src="images/majster_i_margaryta.webp"
             alt="Обкладинка книжки Майстер і Маргарита"
-            width="150"
           />
           <p><strong>Майстер і Маргарита</strong> — Михайло Булгаков</p>
-        </li>
-        <li>
+        </div>
+        <div class="book-item">
           <img
             src="images/malenkyi_prync.webp"
             alt="Обкладинка книжки Маленький принц"
-            width="150"
           />
           <p><strong>Маленький принц</strong> — Антуан де Сент-Екзюпері</p>
-        </li>
-        <li>
-          <img
-            src="images/kobzar.webp"
-            alt="Обкладинка книжки Кобзар"
-            width="150"
-          />
+        </div>
+        <div class="book-item">
+          <img src="images/kobzar.webp" alt="Обкладинка книжки Кобзар" />
           <p><strong>Кобзар</strong> — Тарас Шевченко</p>
-        </li>
-        <li>
+        </div>
+        <div class="book-item">
           <img
             src="images/tini_zabutyh_predkiv.webp"
             alt="Обкладинка книжки Тіні забутих предків"
-            width="150"
           />
           <p><strong>Тіні забутих предків</strong> — Михайло Коцюбинський</p>
-        </li>
-        <li>
+        </div>
+        <div class="book-item">
           <img
             src="images/atomni_zvychky.webp"
             alt="Обкладинка книжки Атомні звички"
-            width="150"
           />
           <p><strong>Атомні звички</strong> — Джеймс Клір</p>
-        </li>
-      </ol>
+        </div>
+      </div>
 
-      <form action="#" method="get">
-        <label for="search">Пошук книжок:</label>
-        <input
-          type="text"
-          id="search"
-          name="q"
-          placeholder="Введіть назву..."
-        />
-        <button type="submit">Пошук</button>
+      <form
+        action="#"
+        method="get"
+        class="form-container"
+        style="margin-top: 40px"
+      >
+        <div class="form-group">
+          <label for="search">Пошук книжок:</label>
+          <input
+            type="text"
+            id="search"
+            name="q"
+            placeholder="Введіть назву..."
+            required
+            minlength="2"
+          />
+          <div class="error-message" data-for="q"></div>
+        </div>
+
+        <button type="submit" class="btn-submit">Пошук</button>
       </form>
     </main>
 

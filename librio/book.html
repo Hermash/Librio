@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>1984 | Librio</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/book.css" />
   </head>
   <body>
     <header class="site-header">
@@ -12,19 +13,19 @@
         <div class="logo">
           <img src="images/logo_full1.png" alt="Логотип Librio" width="100" />
         </div>
-      
+
         <div class="search">
           <form action="catalog.html" method="get">
             <input type="text" name="q" placeholder="Search Books" />
             <button type="submit">🔍</button>
           </form>
         </div>
-      
+
         <div class="profile">
           <a href="auth.html" class="btn">Профіль</a>
         </div>
       </div>
-    
+
       <nav class="main-nav">
         <a href="index.html">Головна</a>
         <span>|</span>
@@ -37,35 +38,42 @@
       <div class="burger">☰</div>
     </header>
 
-    <main>
-      <h1>1984</h1>
-      <img src="images/1984.webp" alt="Обкладинка книги 1984" width="200" />
+    <main class="book-main">
+      <div class="book-header">
+        <h1>1984</h1>
+        <h2>Автор: Джордж Орвелл</h2>
+      </div>
 
-      <h2>Автор: Джордж Орвелл</h2>
-      
-      <h3>Про книгу</h3>
-      <p>
-        Роман-антиутопія, який описує тоталітарне суспільство, де кожен крок
-        людини перебуває під контролем. Твір про владу, правду та свободу.
-      </p>
-      <p>
-        Головний герой Вінстон Сміт живе у світі, де Великий Брат стежить за кожним. 
-        Він працює в Міністерстві правди та переписує історію відповідно до потреб партії.
-      </p>
+      <div class="book-content">
+        <div class="book-cover">
+          <img src="images/1984.webp" alt="Обкладинка книги 1984" />
+        </div>
+        <div class="book-info">
+          <h3>Про книгу</h3>
+          <p>Роман-антиутопія, який описує тоталітарне суспільство...</p>
+          <p>
+            Головний герой Вінстон Сміт живе у світі, де Великий Брат стежить...
+          </p>
 
-      <h3>Деталі</h3>
-      <ul>
-        <li>Жанр: Антиутопія</li>
-        <li>Рік видання: 1949</li>
-        <li>Сторінок: 328</li>
-        <li>Мова: Українська</li>
-      </ul>
+          <h3>Деталі</h3>
+          <ul>
+            <li>Жанр: Антиутопія</li>
+            <li>Рік видання: 1949</li>
+            <li>Сторінок: 328</li>
+            <li>Мова: Українська</li>
+          </ul>
 
-      <h3>Відгуки</h3>
-      <p><strong>Марія:</strong> Дуже сильна книга! Актуальна і сьогодні.</p>
-      <p><strong>Олександр:</strong> Важка для сприйняття, але варта уваги.</p>
+          <h3>Відгуки</h3>
+          <p>
+            <strong>Марія:</strong> Дуже сильна книга! Актуальна і сьогодні.
+          </p>
+          <p>
+            <strong>Олександр:</strong> Важка для сприйняття, але варта уваги.
+          </p>
+        </div>
+      </div>
 
-      <a href="catalog.html">← Повернутись до каталогу</a>
+      <a href="catalog.html" class="btn-back">← Повернутись до каталогу</a>
     </main>
 
     <footer class="site-footer">

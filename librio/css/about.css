@@ -1,0 +1,32 @@
+.about-layout {
+  display: flex;
+  gap: 40px;
+  padding: 20px 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1 1 400px;
+}
+
+.about-form {
+  flex: 1 1 350px;
+}
+
+.form-group .error-message {
+  display: none;
+}
+
+.form-group input:invalid + .error-message,
+.form-group textarea:invalid + .error-message {
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .about-layout {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

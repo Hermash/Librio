@@ -1,0 +1,57 @@
+.index-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.intro, .genres, .featured, .newsletter {
+  background-color: #ffffff;
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.genres ul, .featured-books {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  list-style: none;
+}
+
+.genres li, .featured-books .book {
+  background-color: #F2F4F3;
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.featured-books .book img {
+  max-width: 188px;
+  border-radius: 5px;
+}
+
+.newsletter input[type="email"] {
+  width: calc(100% - 140px);
+  margin-right: 10px;
+  padding: 10px 15px;
+}
+
+.newsletter .btn-submit {
+  margin: 10px 0;
+}
+
+/* Адаптивність */
+@media (max-width: 700px) {
+  .genres ul, .featured-books {
+    flex-direction: column;
+  }
+
+  .newsletter input[type="email"] {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+}

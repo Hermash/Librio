@@ -5,36 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Вхід | Librio</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/auth.css" />
   </head>
   <body>
-    <header>
-      <h1>Вхід у профіль</h1>
-    </header>
-
     <main>
       <h1>Вхід у систему</h1>
       <p>Увійдіть, щоб переглянути свій профіль і бібліотеку.</p>
 
-      <form action="profile.html" method="post">
-        <label for="email">Електронна пошта:</label><br />
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="example@email.com"
-          required
-        /><br /><br />
+      <form
+        action="profile.html"
+        method="post"
+        class="form-container"
+        id="loginForm"
+      >
+        <div class="form-group">
+          <label for="email">Електронна пошта:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@email.com"
+            required
+          />
+          <div class="error-message" data-for="email"></div>
+        </div>
 
-        <label for="password">Пароль:</label><br />
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="********"
-          required
-        /><br /><br />
+        <div class="form-group">
+          <label for="password">Пароль:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="********"
+            required
+            minlength="6"
+          />
+          <div class="error-message" data-for="password"></div>
+        </div>
 
-        <button type="submit">Увійти</button>
+        <button type="submit" class="btn-submit">Увійти</button>
       </form>
 
       <p>Ще не маєте акаунта? <a href="#">Зареєструйтесь</a></p>
