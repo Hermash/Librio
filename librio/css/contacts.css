@@ -11,12 +11,13 @@
   margin-top: 20px;
 }
 
-.contact-info, .contact-form {
+.contact-info,
+.contact-form {
   flex: 1 1 400px;
   background-color: #ffffff;
   padding: 20px 25px;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .contact-info ul {
@@ -29,7 +30,7 @@
 }
 
 .contact-info a {
-  color: #49111C;
+  color: #49111c;
   text-decoration: none;
 }
 

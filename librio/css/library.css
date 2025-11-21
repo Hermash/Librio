@@ -1,81 +1,80 @@
 .page-layout {
   display: flex;
-  gap: 20px;
-  min-height: 80vh;
+  gap: 40px;
+  align-items: flex-start;
 }
 
+/* Сайдбар */
 .sidebar {
+  flex: 0 0 260px;
+  background: var(--white);
+  padding: 30px;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
-  width: 220px;
-  background-color: #F2F4F3;
-  padding: 20px 10px;
-  gap: 10px;
-  border-radius: 10px;
+  gap: 15px;
 }
 
-.sidebar .menu-item {
+.menu-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 15px;
-  border-radius: 25px;
-  color: #49111C;
-  text-decoration: none;
+  padding: 15px 20px;
+  background: var(--bg-light);
+  border-radius: 10px;
+  font-weight: 600;
+  color: var(--primary-brown);
   transition: 0.3s;
 }
-
-.sidebar .menu-item.active,
-.sidebar .menu-item:hover {
-  background-color: #A9927D;
-  color: #F2F4F3;
+.menu-item:hover,
+.menu-item.active {
+  background: var(--primary-brown);
+  color: var(--white);
 }
 
-.library-main {
+/* Контент */
+.library-main,
+.profile-main {
   flex: 1;
-  background-color: #ffffff;
-  padding: 20px 25px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.library-books {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  background: var(--white);
+  padding: 40px;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
 }
 
 .library-books li a {
-  text-decoration: none;
-  color: #0A0908;
-  padding: 8px 12px;
+  display: block;
+  padding: 15px;
+  background: var(--bg-light);
+  margin-bottom: 10px;
   border-radius: 10px;
-  background-color: #F2F4F3;
-  transition: 0.3s;
+  font-weight: 600;
 }
-
 .library-books li a:hover {
-  background-color: #A9927D;
-  color: #F2F4F3;
+  background: #eaddcf;
 }
 
-/* Адаптивність */
+/* Профіль */
+.profile-main img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--bg-light);
+  margin-bottom: 20px;
+}
+
 @media (max-width: 800px) {
   .page-layout {
     flex-direction: column;
   }
-
   .sidebar {
-    flex-direction: row;
     width: 100%;
-    justify-content: space-around;
-    padding: 10px 0;
-  }
-
-  .sidebar .menu-item {
-    flex: 1;
+    flex-direction: row;
     justify-content: center;
+  }
+  .menu-item span:last-child {
+    display: none;
   }
 }

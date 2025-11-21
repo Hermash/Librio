@@ -1,57 +1,75 @@
-.index-main {
-  max-width: 1200px;
+.index-main section {
+  max-width: 1000px;
+  width: 100%;
   margin: 0 auto;
-  padding: 30px 20px;
+  background: var(--white);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.index-main {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 50px;
 }
 
-.intro, .genres, .featured, .newsletter {
-  background-color: #ffffff;
-  padding: 20px 25px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.genres ul, .featured-books {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  padding: 0;
-  list-style: none;
-}
-
-.genres li, .featured-books .book {
-  background-color: #F2F4F3;
-  padding: 10px 15px;
-  border-radius: 10px;
+section {
+  background: var(--white);
+  padding: 50px 40px;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
   text-align: center;
 }
 
-.featured-books .book img {
-  max-width: 188px;
+/* Жанри */
+.genres ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.genres li {
+  background-color: var(--bg-light);
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.genres li:hover {
+  background-color: var(--accent-red);
+  color: var(--white);
+}
+
+.featured-books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.book {
+  width: 200px; /* Фіксована ширина картки */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book img {
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+  margin-bottom: 15px;
   border-radius: 5px;
 }
 
-.newsletter input[type="email"] {
-  width: calc(100% - 140px);
-  margin-right: 10px;
-  padding: 10px 15px;
-}
-
-.newsletter .btn-submit {
-  margin: 10px 0;
-}
-
-/* Адаптивність */
-@media (max-width: 700px) {
-  .genres ul, .featured-books {
-    flex-direction: column;
-  }
-
-  .newsletter input[type="email"] {
-    width: 100%;
-    margin: 0 0 10px 0;
-  }
+/* Підписка */
+.newsletter form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
 }

@@ -1,46 +1,55 @@
-.catalog-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 30px 20px;
+.catalog-main h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
 }
 
+/* СІТКА КНИГ */
 .book-grid {
   display: grid;
+  /* Адаптивна сітка: мінімум 220px. 
+     На екрані 1200px це дасть 3 книг в ряд. */
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 25px;
-  margin-bottom: 40px;
+  gap: 30px;
+  justify-items: center;
 }
 
 .book-item {
+  background: var(--white);
+  padding: 20px;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ffffff;
-  padding: 15px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   text-align: center;
-  transition: transform 0.2s;
-}
-
-.book-item img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
 }
 
 .book-item:hover {
   transform: translateY(-5px);
 }
 
-.search-form {
-  max-width: 500px;
-  margin: 0 auto 50px;
+/* Зображення книги */
+.book-item img {
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 15px;
+  background-color: #fff;
+  border-radius: 8px;
 }
 
-@media (max-width: 700px) {
-  .book-grid {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 15px;
-  }
+.book-item p {
+  font-weight: 600;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Пошук внизу */
+.catalog-main .form-container {
+  max-width: 600px;
+  margin: 60px auto 0;
 }

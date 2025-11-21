@@ -1,32 +1,27 @@
 .about-layout {
   display: flex;
-  gap: 40px;
-  padding: 20px 10px;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 50px;
   flex-wrap: wrap;
 }
 
 .about-text {
-  flex: 1 1 400px;
+  flex: 1;
+  min-width: 320px;
+  font-size: 16px;
 }
 
 .about-form {
-  flex: 1 1 350px;
+  flex: 1;
+  min-width: 320px;
 }
 
-.form-group .error-message {
-  display: none;
+.about-form .form-container {
+  width: 100%;
+  max-width: 100%;
 }
 
-.form-group input:invalid + .error-message,
-.form-group textarea:invalid + .error-message {
-  display: block;
-}
-
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .about-layout {
     flex-direction: column;
-    gap: 20px;
   }
 }
