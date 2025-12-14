@@ -46,28 +46,94 @@ document.addEventListener('keydown', event => {
   }
 
   // Валідація контактної форми
-  const form = document.querySelector('#contactForm');
-  if (form) {
-    form.addEventListener('submit', event => {
-      let isValid = true;
+document.querySelectorAll('form').forEach(form => {
+  let formResult = document.createElement('div');
+  formResult.style.marginTop = '10px';
+  formResult.style.fontWeight = 'bold';
+  form.appendChild(formResult);
 
-      form.querySelectorAll('input, textarea').forEach(field => {
-        const error = field.nextElementSibling;
-        if (!error) return;
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    formResult.textContent = '';
+    let isValid = true;
 
-        error.textContent = '';
-        error.classList.remove('active');
+    const name = form.name ? form.name.value.trim() : '';
+    const email = form.email ? form.email.value.trim() : '';
+    const message = form.message ? form.message.value.trim() : '';
 
-        if (!field.checkValidity()) {
-          isValid = false;
-          error.textContent = field.validationMessage;
-          error.classList.add('active');
-        }
+    const fields = [];
+
+    if (form.name) {
+      fields.push({
+        el: form.name,
+        value: name,
+        minLength: 3,
+        type: 'text',
+        errorMsg: "Ім'я має містити мінімум 3 символи."
       });
+    }
 
-      if (!isValid) event.preventDefault();
+    if (form.email) {
+      fields.push({
+        el: form.email,
+        value: email,
+        type: 'email',
+        errorMsg: 'Email має бути коректним.'
+      });
+    }
+
+    if (form.message) {
+      fields.push({
+        el: form.message,
+        value: message,
+        minLength: 10,
+        type: 'text',
+        errorMsg: 'Повідомлення має містити мінімум 10 символів.'
+      });
+    }
+
+    // Очищення попередніх помилок
+    fields.forEach(f => {
+      f.el.style.borderColor = '';
+      const errorSpan = f.el.nextElementSibling;
+      if (errorSpan) {
+        errorSpan.textContent = '';
+        errorSpan.style.display = 'none';
+      }
     });
-  }
+
+    // Валідація
+    fields.forEach(f => {
+      let valid = true;
+      if (f.type === 'text' && f.minLength) {
+        if (f.value.length < f.minLength) valid = false;
+      }
+      if (f.type === 'email') {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(f.value)) valid = false;
+      }
+
+      if (!valid) {
+        isValid = false;
+        f.el.style.borderColor = 'red';
+        const errorSpan = f.el.nextElementSibling;
+        if (errorSpan) {
+          errorSpan.textContent = f.errorMsg;
+          errorSpan.style.display = 'block';
+          errorSpan.style.color = 'red';
+          errorSpan.style.fontSize = '0.9em';
+        }
+      }
+    });
+
+    if (isValid) {
+      console.log({ name, email, message });
+      formResult.textContent = 'Форма успішно надіслана!';
+      formResult.style.color = 'green';
+      form.reset();
+    }
+  });
+});
 
   // Стилізація книг
   document.querySelectorAll('.book').forEach(book => {

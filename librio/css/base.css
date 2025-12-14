@@ -66,7 +66,9 @@ img {
 .dark-theme #genreList li,
 .dark-theme .contact-info p,
 .dark-theme .contact-info li,
-.dark-theme .contact-info h3 {
+.dark-theme .contact-info h3,
+.dark-theme form label,
+.dark-theme form p {
   color: rgb(112, 111, 111);
 }
 
@@ -74,7 +76,6 @@ img {
 .dark-theme .genres,
 .dark-theme .featured,
 .dark-theme .newsletter,
-.dark-theme .form-container,
 .dark-theme .book-item {
   background-color: #7c7c7c;
   color: #797979;
@@ -84,8 +85,7 @@ img {
 .dark-theme h3,
 .dark-theme p,
 .dark-theme li,
-.dark-theme label,
-.dark-theme form label {
+.dark-theme label {
   color: #ffffff;
 }
 
@@ -173,4 +173,13 @@ img {
     position: static;
     margin-top: 12px;
   }
+}
+
+.error-message {
+  display: none;
+  margin-top: 3px;
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
 }

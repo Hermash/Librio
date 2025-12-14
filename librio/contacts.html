@@ -63,44 +63,28 @@
 
     <div class="contact-form">
       <h2>Напишіть нам</h2>
-      <form action="#" method="post" class="form-container" id="contactForm">
+      <form id="contactForm" action="#" method="post" novalidate>
   <div class="form-group">
     <label for="name">Ваше ім'я:</label>
-    <input type="text" id="name" name="name" required minlength="2">
-    <div class="error-message" data-for="name"></div>
+    <input type="text" id="name" name="name" required />
+    <span class="error-message"></span>
   </div>
 
   <div class="form-group">
     <label for="email">Ваш Email:</label>
-    <input type="email" id="email" name="email" required>
-    <div class="error-message" data-for="email"></div>
-  </div>
-
-  <div class="form-group">
-    <label for="subject">Тема:</label>
-    <select id="subject" name="subject" required>
-      <option value="">Оберіть тему</option>
-      <option value="general">Загальне питання</option>
-      <option value="support">Технічна підтримка</option>
-      <option value="cooperation">Співпраця</option>
-    </select>
-    <div class="error-message" data-for="subject"></div>
+    <input type="email" id="email" name="email" required />
+    <span class="error-message"></span>
   </div>
 
   <div class="form-group">
     <label for="message">Повідомлення:</label>
-    <textarea
-      id="message"
-      name="message"
-      rows="4"
-      required
-      minlength="5"
-      placeholder="Ваше повідомлення..."
-    ></textarea>
-    <div class="error-message" data-for="message"></div>
+    <textarea id="message" name="message" rows="4" required></textarea>
+    <span class="error-message"></span>
   </div>
 
   <button type="submit" class="btn-submit">Надіслати</button>
+
+  <div id="formResult" style="margin-top:10px; color: green;"></div>
 </form>
     </main>
 
