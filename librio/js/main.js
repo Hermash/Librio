@@ -1,13 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Перемикач теми
-  const themeToggle = document.getElementById('themeToggle');
-  if (themeToggle) {
-    themeToggle.addEventListener('change', () => {
-      document.body.classList.toggle('dark-theme');
+  const nameInput = document.querySelector('#name');
+
+  if (nameInput) {
+    // При завантаженні сторінки підставляємо ім’я, якщо воно збережене
+    if (localStorage.getItem('userName')) {
+      nameInput.value = localStorage.getItem('userName');
+    }
+
+    // Зберігаємо ім’я у localStorage при зміні поля
+    nameInput.addEventListener('input', () => {
+      localStorage.setItem('userName', nameInput.value);
     });
   }
 
+
+  // Перемикач теми
+const themeToggle = document.getElementById('themeToggle');
+
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark-theme');
+  if (themeToggle) themeToggle.checked = true;
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener('change', () => {
+    document.body.classList.toggle('dark-theme');
+    // Зберігаємо стан у localStorage
+    if (document.body.classList.contains('dark-theme')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  });
+}
   // Підсвітка меню
 const navLinks = document.querySelectorAll('.main-nav a');
 
